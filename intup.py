@@ -54,14 +54,6 @@ table.align['До'] = 'l'
 table.align['После'] = 'l'
 
 
-def windowEnumerationHandler(hwnd, top_windows):
-    top_windows.append((hwnd, win32gui.GetWindowText(hwnd)))
-
-
-top_windows = []
-win32gui.EnumWindows(windowEnumerationHandler, top_windows)
-
-
 def set_max_len(line, max_len):
     if len(line) > max_len:
         max_len = len(line)
@@ -92,7 +84,7 @@ print(r"""
                          \ `\____\ \____\\ \_\  \ \_\ \ ,__/\ \__\
                           \/_____/\/____/ \/_/   \/_/\ \ \/  \/__/
                                                       \ \_\
-                                                       \/_/ @dece1ver
+                                                       \/_/  @dece1ver
 """)
 
 try:
